@@ -1,0 +1,42 @@
+.section5 {
+  padding-top: 100px;
+  padding-bottom: 130px;
+
+  background-color: $bg-color;
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @include h2;
+  }
+
+  &__text {
+    margin-bottom: 70px;
+    @include descr-txt;
+  }
+
+  &__list {
+    margin: 0 -15px;
+    margin-bottom: 50px;
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 15px;
+    flex-basis: calc((100% - 8 * 15px) / 4);
+  }
+
+  &__pic {
+    border-radius: 10px;
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    @include button-link;
+  }
+}
