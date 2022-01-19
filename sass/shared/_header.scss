@@ -24,9 +24,8 @@
   }
 
   &__title {
-    margin-bottom: 50px;
-    max-width: 830px;
     margin: 0 auto;
+
     margin-bottom: 50px;
     font-weight: 800;
     font-size: 48px;
@@ -38,6 +37,14 @@
     margin: 0 auto;
 
     @include button-link;
+    box-shadow: 0;
+    transition: box-shadow 250ms linear;
+
+    &:hover,
+    &:focus {
+      box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        -2px -2px 15px 5px rgba(0, 0, 0, 0);
+    }
   }
 }
 
@@ -65,5 +72,12 @@
   &__link {
     padding: 40px 0;
     @include menu-txt;
+
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }

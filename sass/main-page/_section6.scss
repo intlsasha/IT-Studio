@@ -1,51 +1,68 @@
 .section6 {
-  padding-top: 70px;
-  padding-bottom: 420px;
+  padding-bottom: 85px;
+}
+
+.subscribe {
+  padding-top: 85px;
   text-align: center;
+  border-top: 1px solid $line-color;
 
-  background-image: url('../images/index-images/video-img.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &__title {
-    margin-bottom: 30px;
-    @include h2;
-    color: $txt-color-white;
+  &__label {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #000000;
   }
 
   &__text {
-    margin-bottom: 70px;
+    margin: 0;
+    margin-bottom: 30px;
     @include descr-txt;
-    color: $txt-color-white;
+  }
+
+  &__input {
+    padding: 14px 35px;
+    background: #f fffff;
+    border: 1px solid #f2f2f2;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px 0px 0px 30px;
+  }
+
+  &__button {
+    right: 0;
+    @include button-link;
+    max-width: 190px;
+    padding-left: 26px;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 0px 30px 30px 0px;
+    cursor: pointer;
+  }
+
+  &__no-spam {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.62;
+    color: $txt-color-grey;
   }
 }
 
-.video-embed {
-  position: absolute;
-  width: 970px;
-  top: 220px;
-  left: 70px;
-  background-image: url('../images/index-images/vid-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  padding: 165px 0;
+.input-position {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
 
-  &__button {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px 40px;
-    border: 1px solid $txt-color-white;
-    border-radius: 200px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.56;
-    color: $txt-color-white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+::placeholder {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.62;
+  color: $txt-color-grey;
 }

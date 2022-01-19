@@ -1,9 +1,19 @@
 .section3 {
   position: relative;
-  height: 490px;
   padding-top: 100px;
   padding-bottom: 85px;
-  background: linear-gradient(90deg, #504dc2 20.44%, #5f12d0 80.91%);
+
+  &__bg-img {
+    position: absolute;
+    bottom: 50%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #504dc2 20.44%, #5f12d0 80.91%);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
 
   &--flex {
     display: flex;
@@ -13,12 +23,60 @@
   }
 
   &__title {
-    max-width: 540px;
     @include h2;
     color: #ffffff;
   }
 
   &__button {
     @include button-link;
+    box-shadow: 0;
+    transition: box-shadow 250ms linear;
+
+    &:hover,
+    &:focus {
+      box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        -2px -2px 15px 5px rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+.articles {
+  padding-bottom: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  border-bottom: 1px solid $line-color;
+}
+
+.article {
+  margin: 0 15px;
+  flex-basis: calc((100% - 6 * 15px) / 3);
+  &__image {
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $txt-color-black;
+  }
+  &__count {
+    color: $accent-color;
+  }
+
+  &__text {
+    max-width: 350px;
+    margin-bottom: 30px;
+    @include descr-txt;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    @include details-link;
   }
 }
